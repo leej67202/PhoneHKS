@@ -17,7 +17,7 @@ namespace PhoneHKS
             PhoneNumbers = new List<string>();
             //This create a NavigationPage
             MainPage = new NavigationPage(new MainPage());
-
+            //Build
 			//MainPage = new MainPage(); //This is just a standard page
 		}
 
