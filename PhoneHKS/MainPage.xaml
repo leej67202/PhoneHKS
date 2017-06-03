@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PhoneHKS.MainPage">
+     <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 10, 0, 0"
+                    Android="0, 0, 0, 0"
+                    WinPhone="20, 20, 20, 20" />
+     </ContentPage.Padding>
+    <ContentPage.Content>
+        <ScrollView x:Name="mainScrollView" >
+        <StackLayout x:Name="mainStackLayout" VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical"
+                     Spacing="2">
+            
+            <Entry x:Name="phoneNumberText" HeightRequest="65" Text="852-TTTTTTTT" />
+            <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+            <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
+            <Button x:Name="callHistoryButton" Text="Call History" IsEnabled="false" Clicked="OnCallHistory"/>
+            <Button x:Name="clearButton" Text="Clear" IsEnabled="true" Clicked="OnClear" />
+            <Label x:Name="dateLabel" />
+            <Label x:Name="clockLabel" />
+            <Label x:Name="fontSizeLabel"/>
+            <Slider x:Name="clockSlider" VerticalOptions="CenterAndExpand" ValueChanged="Handle_ValueChanged"/>
+                
+            <Button x:Name="exitButton" Text="Exit" IsEnabled="true" Clicked="OnExit" />
+        </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
