@@ -19,6 +19,7 @@ namespace PhoneHKS
             MainPage = new NavigationPage(new MainPage());
             //Build
 			//MainPage = new MainPage(); //This is just a standard page
+            // upate the change
 		}
 
 		protected override void OnStart()
